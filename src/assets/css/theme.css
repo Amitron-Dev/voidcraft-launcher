@@ -1,24 +1,41 @@
 .global {
-    --element-color: #00bd7a;
-    --transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    --element-color: #F3C400;
+
+    /* Transition moderne par défaut (inspirée d’Apple) */
+    --transition: 250ms cubic-bezier(0.33, 1, 0.68, 1);
+
+    /* Transition rapide */
+    --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Transition “snappy” avec léger rebond */
+    --transition-bounce: 350ms cubic-bezier(.34,1.56,.64,1);
+
     --dark-color: #292929;
-    --light-color: rgb(245, 245, 245);
+    --light-color: rgb(255, 255, 245);
 }
 
+/* MODE SOMBRE JAUNE */
 .dark {
-    --color: #F5F5F5;
-    --background: #292929;
-    --background-element: #424242;
-    --background-transparent: #2c2c2ccc;
-    --shadow: rgba(25, 25, 25, 0.7);
-    --svg-color: brightness(0) saturate(100%) invert(100%) sepia(55%) saturate(23%) hue-rotate(236deg) brightness(108%) contrast(92%);
+    --color: #FFF8D5;
+    --background: #1f1f1f;
+    --background-element: #3a3a00;
+    --background-transparent: rgba(40, 40, 0, 0.7);
+    --shadow: rgba(20, 20, 0, 0.7);
+
+    --svg-color: brightness(0) saturate(100%)
+        invert(85%) sepia(56%) saturate(800%)
+        hue-rotate(10deg) brightness(110%) contrast(95%);
 }
 
+/* MODE CLAIR JAUNE */
 .light {
-    --color: #151515;
-    --background: rgb(245, 245, 245);
-    --background-element: #c2c2c2;
-    --background-transparent: rgba(204, 204, 204, 0.8);
-    --shadow: rgba(208, 208, 208, 0.7);
-    --svg-color: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(1719%) hue-rotate(357deg) brightness(94%) contrast(84%);
+    --color: #151500;
+    --background: #FFFBE6;
+    --background-element: #FFE680;
+    --background-transparent: rgba(255, 235, 140, 0.7);
+    --shadow: rgba(255, 220, 90, 0.7);
+
+    --svg-color: brightness(0) saturate(100%)
+        invert(75%) sepia(93%) saturate(500%)
+        hue-rotate(5deg) brightness(105%) contrast(92%);
 }
